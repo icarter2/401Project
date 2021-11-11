@@ -7,11 +7,6 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-/* Provide sufficient contrast against white background */
-/*a {
-  color: white;
-}*/
-
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -24,15 +19,8 @@ a.navbar-brand {
   border-color: #1861ac;
 }
 
-/* Layout styles 
+/* Dashboard Layout styles 
 -------------------------------------------------- */
-/*#layout-body {
-    background-color: lightslategrey;
-}
-*/
-/*#navigation {
-    background-color: lightslategray;
-}*/
 
 #dashboard-body {
     width: 100%;
@@ -47,14 +35,14 @@ a.navbar-brand {
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden; /* Disable  scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0.5s; 
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 20px;
     text-decoration: none;
     font-size: 18px;
     color: #818181;
@@ -72,29 +60,31 @@ a.navbar-brand {
     position: absolute;
     top: 0;
     right: 0;
-    right: 25px;
+    padding-right: 25px;
     font-size: 36px;
+}
+
+.sidenav #openbtn {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    font-size: 36px;
+    display: none;
+    transition: 0.5s;
+}
+
+#logout-btn {
+    position: absolute;
+    bottom: 0;
 }
 
 #nav-logo {
     position: relative;
-    height: 25px;
-    width: 25px;
-    left: 20%;
+    height: 100px;
+    width: 100px;
+    left: 0;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#dash-main {
-    transition: margin-left .5s;
-    padding: 20px;
-    margin-left: 15%;
-}
-
-.dash-col {
-    margin-right: 50px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
@@ -105,36 +95,126 @@ a.navbar-brand {
         }
 }
 
+/* Dashboard content styles 
+-------------------------------------------------- */
+
+#dash-main {
+    transition: margin-left .5s;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.dash-col {
+    margin-right: 50px;
+}
 
 .dash-block {
     height: 400px;
     width: 600px;
-    border: 2px solid black;
     margin-top: 5%;
     margin-right: 5%;
     margin-left: 5%;
+    border: 1px solid #111;
 }
 
-#logout-btn {
-    position: absolute;
-    bottom: 0;
+@media screen and (max-width: 790px) {
+    .dash-block {
+        width: 70%;
+        max-height: 300px;
+        min-width: 300px;
+    }
+
+    .dash-block h1 {
+        font-size: 18px;
+    }
+
+    #dash-graph {
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
 
-#query-submit {
+#query-submit, #scan-submit {
     width: 80%;
     height: 80%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 10%;
+    padding-top: 50px;
     margin-bottom: auto;
 }
 
-#query-submit h1 {
+#dash-news, #dash-graph {
+    width: 80%;
+    height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+#dash-graph {
+    padding-top: 20px;
+}
+
+
+
+#query-submit h1, #scan-submit h1 {
     text-align: center;
 }
 
-#query-submit p {
+#query-submit p, #scan-submit p {
     margin-bottom: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#query-submit input, #scan-submit input {
+    float: right;
+    margin-right: 0;
+    margin-top: 10px;
+}
+
+textarea {
+    color: dimgrey;
+    max-width: 100%;
+}
+
+#bar-chart {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#dash-news {
+    position: relative;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    display: block;
+}
+
+hr {
+    border-top: 2px solid rgba(0,0,0,.15);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.news-item {
+    position: relative;
+    width: 94%;
+    min-height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.news-text {
+    width: 90%;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    position: relative;
+    top: 0;
 }
 
 /* Homepage styles 
@@ -190,13 +270,10 @@ i {
 
 }
 
-/* Slogan text styles 
--------------------------------------------------- */
 #slogan-text {
     font-size: 20px;
     max-width: 700px;
     min-width: 200px;
-/*    text-shadow: 2px 2px 2px #4E4E4E;*/
 }
 
 /* Sticky footer styles
