@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_DashboardLayout";
+}
+
+<div class="container-fluid">
+    <div class="row"">
+        <div class="dash-col col my-auto">
+            <div class="dash-block">
+                <form id="query-submit">
+                    <h1>Submit a Query</h1>
+                    <p>Keywords</p>
+                    <textarea rows="4" cols="50" name="query-text" form="query-submit">Enter query here...</textarea>
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
+        <div class="dash-col col my-auto">
+            <div class="dash-block" id="dash-graph"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="dash-col col my-auto">
+            <div class="dash-block" id="scan-submit"></div>
+        </div>
+        <div class="dash-col col my-auto">
+            <div class="dash-block" id="dash-news"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://use.fontawesome.com/3bb8786d15.js"></script>
+</head>
+<body id="dashboard-body">
+
+    <div id="sidebar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img id="nav-logo" src="#" />
+        <a href="#">Scans</a>
+        <a href="#">Queries</a>
+        <a href="#">Alerts</a>
+
+        <a id="logout-btn" href="#"><span>Logout</span><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    </div>
+
+    <main id="dash-main" role="main">
+        @RenderBody()
+    </main>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
