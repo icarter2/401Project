@@ -115,6 +115,9 @@ a.navbar-brand {
     margin-right: 5%;
     margin-left: 5%;
     border: 1px solid #111;
+    background-color: #111;
+    color: white;
+    box-shadow: 0 3px 10px rgb(0,0,0,0.3);
 }
 
 @media screen and (max-width: 790px) {
@@ -190,6 +193,7 @@ textarea {
     overflow-y: scroll;
     background-color: whitesmoke;
     display: block;
+    height: 75%;
 }
 
 hr {
@@ -205,6 +209,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
+    color: black;
 }
 
 .news-text {
@@ -215,6 +220,7 @@ hr {
     font-size: 14px;
     position: relative;
     top: 0;
+    color: black;
 }
 
 /* Homepage styles 
