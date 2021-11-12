@@ -12,5 +12,10 @@ namespace ift_401project.Controllers
         {
             return View();
         }
+
+        public IActionResult Alerts()
+        {
+            return View();
+        }
     }
 }

@@ -223,6 +223,20 @@ hr {
     color: black;
 }
 
+/* Alerts styles 
+-------------------------------------------------- */
+
+#alerts-table {
+    margin-top: 20px;
+}
+
+td, th {
+    width: 1200px;
+    padding: 10px;
+    text-align: center;
+}
+
+
 /* Homepage styles 
 -------------------------------------------------- */
 #home-content {

@@ -17,7 +17,8 @@
         <a asp-controller="Home" asp-action="Index"><img id="nav-logo" src="~/logo-placeholder-image.png" /></a>
         <a href="#">Scans</a>
         <a href="#">Queries</a>
-        <a href="#">Alerts</a>
+        <a asp-controller="Dashboard" asp-action="Alerts">Alerts</a>
+        <a asp-contrller="Dashbard" asp-action="Index">Dashboard</a>
 
         <a id="logout-btn" href="#"><span>Logout</span><i class="fa fa-sign-out" aria-hidden="true"></i></a>
     </div>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Alerts";
+    Layout = "_DashboardLayout";
+}
+
+<div class="container-fluid">
+    <h1 style="text-align:center">Alerts List</h1>
+    <table id="alerts-table">
+        <tbody style="display: block; border: 1px solid black; width: 1200px; height: 800px; overflow-y: scroll;">
+            <tr class="alerts-row">
+                <td></td>
+                <th>Title</th>
+                <th>Summary</th>
+                <th>Date of Alert</th>
+            </tr>
+            <tr class="alerts-row">
+                <td><input type="checkbox" /></td>
+                <td>Alert A</td>
+                <td>New NetGear vulnerability discovered</td>
+                <td>10/13/2021 10:31:43</td>
+            </tr>
+            <tr class="alerts-row">
+                <td><input type="checkbox" /></td>
+                <td>Alert B</td>
+                <td>Port vulnerability discovered</td>
+                <td>10/13/2021 10:31:43</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+ 
