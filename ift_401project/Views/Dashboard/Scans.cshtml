@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Alerts";
+    Layout = "_DashboardLayout";
+}
+
+<div class="container-fluid">
+    <h1 style="text-align:center">Scans List</h1>
+    <table id="scans-table">
+        <tbody style="display: block; border: 1px solid black; width: 1200px; height: 800px; overflow-y: scroll;">
+            <tr class="scans-row">
+                <td></td>
+                <th>Title</th>
+                <th>Date Initiated</th>
+                <th>Status</th>
+            </tr>
+            <tr class="scans-row">
+                <td><input type="checkbox" /></td>
+                <td><a asp-controller="Dashboard" asp-action="ScanDetails">Scan A</a></td>
+                <td>10/13/2021 10:31:43</td>
+                <td>In Progress</td>
+            </tr>
+            <tr class="scans-row">
+                <td><input type="checkbox" /></td>
+                <td>Scan B</td>
+                <td>10/13/2021 9:33:43</td>
+                <td>Completed</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

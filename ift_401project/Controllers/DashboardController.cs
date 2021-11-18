@@ -17,5 +17,25 @@ namespace ift_401project.Controllers
         {
             return View();
         }
+
+        public IActionResult Queries()
+        {
+            return View();
+        }
+
+        public IActionResult Scans()
+        {
+            return View();
+        }
+
+        public IActionResult ScanDetails()
+        {
+            return View();
+        }
+
+        public IActionResult QueryDetails()
+        {
+            return View();
+        }
     }
 }

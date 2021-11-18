@@ -226,7 +226,7 @@ hr {
 /* Alerts styles 
 -------------------------------------------------- */
 
-#alerts-table {
+#alerts-table, #scans-table, #queries-table {
     margin-top: 20px;
 }
 
@@ -236,108 +236,125 @@ td, th {
     text-align: center;
 }
 
-
-/* Homepage styles 
+/* Detail page styles 
 -------------------------------------------------- */
-#home-content {
-    margin-top: 5%;
+.details-container {
     width: 80%;
-}
-
-#logo-img {
-    display: block;
-    margin: 0 auto;
-}
-
-/* Login page styles 
--------------------------------------------------- */
-.login-div {
-    width: 25%;
     min-width: 300px;
-    margin-top: 20px;
-    height: 100px;
-    border-radius: 5px;
-    background-color: lightgray;
-}
-
-#login-content {
+    max-width: 1200px;
+    margin-left: 10%;
     margin-top: 10%;
-    width: 80%;
 }
 
-i {
-    position: relative;
-    top: 25%;
-    left: 10%;
+@media screen and (max-width: 515px) {
+    details-container span {
+        float: left;
+    }
 }
 
-#google-icon {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 25%;
-    left: 10%;
-}
-
-#fb-icon {
-    color: #4267B2;
-}
-
-.login-text {
-    position: relative;
-    text-align: right;
-    margin-right: 20%;
-
-}
-
-#slogan-text {
-    font-size: 20px;
-    max-width: 700px;
-    min-width: 200px;
-}
-
-/* Sticky footer styles
+    /* Homepage styles 
 -------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+    #home-content {
+        margin-top: 5%;
+        width: 80%;
+    }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+    #logo-img {
+        display: block;
+        margin: 0 auto;
+    }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
+    /* Login page styles 
 -------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
+    .login-div {
+        width: 25%;
+        min-width: 300px;
+        margin-top: 20px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: lightgray;
+    }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
+    #login-content {
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    i {
+        position: relative;
+        top: 25%;
+        left: 10%;
+    }
+
+    #google-icon {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 25%;
+        left: 10%;
+    }
+
+    #fb-icon {
+        color: #4267B2;
+    }
+
+    .login-text {
+        position: relative;
+        text-align: right;
+        margin-right: 20%;
+    }
+
+    #slogan-text {
+        font-size: 20px;
+        max-width: 700px;
+        min-width: 200px;
+    }
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px; /* Vertically center the text there */
+    }
