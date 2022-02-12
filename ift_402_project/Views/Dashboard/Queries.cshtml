@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Alerts";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h1 style="text-align:center">Queries List</h1>
+    <table id="queries-table">
+        <tbody style="display: block; border: 1px solid black; width: 1200px; height: 800px; overflow-y: scroll; font-size: 14px;">
+            <tr class="queries-row">
+                <td></td>
+                <th>Title</th>
+                <th>Date Initiated</th>
+                <th>Status</th>
+            </tr>
+            <tr class="queries-row">
+                <td><input type="checkbox" /></td>
+                <td><a asp-controller="Dashboard" asp-action="QueryDetails">Query A</a></td>
+                <td>10/13/2021 10:31:43</td>
+                <td>In Progress</td>
+            </tr>
+            <tr class="queries-row">
+                <td><input type="checkbox" /></td>
+                <td>Query B</td>
+                <td>10/13/2021 9:33:43</td>
+                <td>Completed</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

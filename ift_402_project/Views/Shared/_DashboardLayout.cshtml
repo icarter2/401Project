@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://use.fontawesome.com/3bb8786d15.js"></script>
+</head>
+<body id="dashboard-body">
+
+    <div id="sidebar" class="sidenav">
+        <a href="javascript:void(0)" id="openbtn"><i onclick="openNav()" class="fa fa-bars" aria-hidden="true"></i></a>
+        <a href="javascript:void(0)" class="closebtn"><i onclick="closeNav()" class="fa fa-bars" aria-hidden="true"></i></a>
+        <img id="nav-logo" src="~/wwwroot/logo-placeholder-image.png" />
+        <li>@Html.ActionLink("Scans", "Scans", "Dashboard")</li>
+        <li>@Html.ActionLink("Queries", "Queries", "Dashboard")</li>
+        <li>@Html.ActionLink("Alerts", "Alerts", "Dashboard")</li>
+        <li>@Html.ActionLink("Dashboard", "Index", "Dashboard")</li>
+
+        <a id="logout-btn" href="https://localhost:44316"><span>Homepage</span><i class="fa fa-sign-out" aria-hidden="true" style="padding-left: 5px;"></i></a>
+    </div>
+
+    <main id="dash-main" role="main">
+        @RenderBody()
+    </main>
+
+    @*<footer class="footer text-muted">
+            <div class="container text-center">
+                &copy; 2021 - Vulnerability Assessment Project
+            </div>
+        </footer>*@
+
+    <script src="~/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("sidebar").style.width = "150px";
+            document.getElementById("openbtn").style.display = "none";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("openbtn").style.display = "block";
+        }
+    </script>
+</body>
+</html>
