@@ -3,7 +3,7 @@ import requests
 import sys
 import json
 
-APIKEY = "D3JstZRg8nGXXZ2airRQ0MLMnjjUJJv5"
+APIKEY = "DYHEiYQK5lcJvOxGQbsOD26F9QxjkoPY"
 
 ShodanAPI = Shodan(APIKEY)
 
@@ -22,13 +22,13 @@ def DomainInfo(Hostnames, Pages):
 def DNSResolve(Hostnames):
     r = requests.get("https://api.shodan.io/dns/resolve?hostnames=" + Hostnames + "&key=" + APIKEY)
 
-    return r.text
+    return json.loads(r.text)
 
 
 def DNSReverse(IPs):
     r = requests.get("https://api.shodan.io/dns/reverse?ips=" + IPs + "&key=" + APIKEY)
 
-    return r.text
+    return json.loads(r.text)
 
 
 # Shodan Scan Functions
@@ -60,6 +60,15 @@ def ScanResults(ScanId):
     results = []
     for banner in ShodanAPI.search_cursor('scan:' + ScanId):
         results.append(banner)
+        print(banner)
+    return results
+
+def QueryList():
+    results = ShodanAPI.queries()
+    return results
+
+def HostInfo(IP):
+    results = ShodanAPI.host(IP)
     return results
 
 
@@ -83,7 +92,7 @@ def Main():
         #Example here
         results = Ports()
         print(results)
-    elif sys.argv[1] == "Protocols":eturn results
+    elif sys.argv[1] == "Protocols":
         #Example here
         results = Protocols()
         print(results)
@@ -98,6 +107,12 @@ def Main():
     elif sys.argv[1] == "ScanResults":
         #Example here
         results = ScanResults(sys.argv[2])
+        print(results)
+    elif sys.argv[1] == "Queries":
+        results = QueryList()
+        print(results)
+    elif sys.argv[1] == "HostInfo":
+        results = HostInfo(sys.argv[2])
         print(results)
     else:
         print("Invalid Option")
