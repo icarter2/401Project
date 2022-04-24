@@ -3,6 +3,15 @@ import mysql.connector
 from shodan import Shodan
 import json, sys, socket, hashlib
 
+"""
+USAGE:
+
+python MySQL_DB_Call.py <UserEmail> <Host to Query>
+OR
+python3.exe MySQL_DB_Call.py <UserEmail> <Host to Query>
+
+"""
+
 mydb = mysql.connector.connect(
   host="ift401-database.cdsmd9gvxogj.us-east-2.rds.amazonaws.com",
   user="IFT401Lead",
