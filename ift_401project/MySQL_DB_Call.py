@@ -1,7 +1,7 @@
 
 import mysql.connector
 from shodan import Shodan
-import json, sys, socket
+import json, sys, socket, hashlib
 
 mydb = mysql.connector.connect(
   host="ift401-database.cdsmd9gvxogj.us-east-2.rds.amazonaws.com",
@@ -30,12 +30,16 @@ org = str(Results['org'])
 ports = str(Results['ports'])
 last_update = str(Results['last_update'])
 
-data = (UserEmail, query, hostnames, ip_str, org, ports, last_update)
+#Create ID hash
+HashString = UserEmail + query
+ID = hashlib.md5(HashString.encode()).hexdigest()
+
+data = (ID, UserEmail, query, hostnames, ip_str, org, ports, last_update)
 
 
 sql = (
-    "INSERT INTO HostTest (UserEmail, query, hostnames, ip_str, org, ports, last_update) "
-    "VALUES (%s, %s, %s, %s, %s, %s)"
+    "INSERT INTO HostTest (ID, UserEmail, query, hostnames, ip_str, org, ports, last_update) "
+    "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
 )
 
 mycursor.execute(sql, data)
